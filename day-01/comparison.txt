@@ -1,0 +1,38 @@
+#MODEL="Mistral"
+
+WITH RAG:
+=========
+
+	Support Vector Machines (SVM) are a type of supervised machine learning algorithm used for classification and regression analysis. The primary goal of SVM is to find an optimal hyperplane that separates the data points of different classes in a way that maximizes the margin, which is the distance between the hyperplane and the nearest data points from each class (support vectors).
+
+	In simpler terms, SVM attempts to find the best line or plane that can accurately separate the given dataset into distinct groups. The hyperplane identified by SVM is not necessarily linear; it may be a curve in high-dimensional spaces. To handle nonlinear data, SVM uses a kernel trick to map the input data to a higher dimension where the data can be linearly separable.
+
+	The SVM algorithm involves solving a quadratic optimization problem, which finds the coefficients of the hyperplane (w and b) that maximize the margin while minimizing an error function. The error function measures the misclassification rate of the support vectors. By optimizing this function, SVM can find the hyperplane that provides the best balance between generalization performance (avoiding overfitting) and fitting the training data accurately.
+
+	SVM has been successfully applied to various applications, such as time series prediction, face recognition, medical diagnosis, and more. Its theoretical foundations and experimental success encourage further research into its characteristics and potential uses. The report mentions that there are variations of standard SVM proposed in several papers, which can potentially improve the performance of SVM for specific tasks.
+
+
+WITHOUT RAG:
+============
+
+	Support Vector Machines (SVM) is a supervised machine learning algorithm commonly used for classification and
+regression analysis. It is based on the idea of finding the optimal hyperplane, which can best separate two
+classes of data points in a high-dimensional space.
+
+	In simple terms, SVM finds the boundary that separates data points of different classes by maximizing the margin,
+the distance between the hyperplane and the nearest data points (support vectors) from each class. This margin is
+a measure of the generalization ability of the model - a larger margin typically indicates better performance on
+unseen data.
+
+	For non-separable data, SVM introduces slack variables to accommodate misclassified samples by allowing them to
+move into the margin or a soft margin area. The goal is to find the optimal hyperplane that minimizes the sum of
+these slack variables while still maintaining a reasonable margin.
+
+	In regression problems, SVM can be formulated as Support Vector Regression (SVR) where the goal is to find the
+function that best fits the data points while minimizing the error and the complexity of the model. SVR also uses
+slack variables for errors beyond a specified tolerance, called epsilon, in addition to the margin.
+
+	In summary, SVM offers a powerful tool for handling complex classification and regression tasks by finding optimal
+boundaries or functions that generalize well to unseen data. It is particularly effective when dealing with
+high-dimensional data and small sample sizes, as it focuses on the support vectors that have the most impact on
+the decision boundary.
