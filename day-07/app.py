@@ -2,7 +2,7 @@ import asyncio
 from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
 
-async def scrape_medium_article(url):
+async def scrape_article(url):
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
@@ -30,7 +30,7 @@ async def scrape_medium_article(url):
         return title, article_text , ol_text , ul_text
 
 url = 'https://www.geeksforgeeks.org/large-language-model-llm/'
-title, content , text  , ul = asyncio.run(scrape_medium_article(url))
+title, content , text  , ul = asyncio.run(scrape_article(url))
 
 combined = [title , content , text , ul]
 
