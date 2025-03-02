@@ -114,10 +114,6 @@ if user_query :
             st.write(answer)
             
         st.session_state.messages.append({"role": "assistant", "content": answer})
-elif user_query :
-    with st.chat_message("assistant"):
-        st.write("Please enter your Google API Key in the sidebar first.")
-        st.session_state.messages.append({"role": "assistant", "content": "Please enter your Google API Key in the sidebar first."})
 
 with st.sidebar:
     if st.button("Reset Chat"):
