@@ -1,0 +1,34 @@
+Zoey
+Email: zoey@example.com  
+Phone: (123) 456-7890  
+LinkedIn: linkedin.com/in/zoey  
+GitHub: github.com/zoey
+
+**Summary**  
+A highly motivated software developer with a strong background in Python, machine learning, and web development. Passionate about building AI-driven applications and solving complex problems with technology.  
+
+**Skills**  
+- Python, JavaScript, SQL  
+- Machine Learning, Deep Learning, Data Science  
+- Web Development (React, Node.js, Django)  
+- Cloud Computing (AWS, GCP, Azure)  
+- Cybersecurity Fundamentals  
+
+**Experience**  
+Software Engineer - ABC Tech Solutions (2021 - Present)  
+- Developed and deployed machine learning models for fraud detection.  
+- Designed RESTful APIs using Python and Django.  
+- Implemented scalable cloud-based solutions using AWS.  
+
+Data Analyst Intern - XYZ Analytics (2020 - 2021)  
+- Analyzed large datasets using Python and SQL to generate insights.  
+- Created data visualizations with Tableau and Power BI.  
+- Assisted in the development of predictive analytics models.  
+
+**Education**  
+Bachelor of Science in Computer Science  
+University of Technology, 2021  
+
+**Certifications**  
+- Google Data Analytics Certification  
+- AWS Certified Solutions Architect  
