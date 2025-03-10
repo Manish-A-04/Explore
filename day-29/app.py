@@ -68,46 +68,21 @@ def speak(text):
 r = sr.Recognizer()
 
 def listen():
-    """
-    Records audio from microphone, detects silence to automatically stop recording,
-    and transcribes the audio using Whisper.
-    
-    Returns:
-        str or None: Transcribed text or None if an error occurred
-    """
-    # Initialize recognizer
     recognizer = sr.Recognizer()
-    
-    # Configure silence detection
-    recognizer.pause_threshold = 1.5  # Seconds of silence to consider the phrase complete
-    recognizer.non_speaking_duration = 0.5  # How long silence must be to be considered silence
+    recognizer.pause_threshold = 1.5 
+    recognizer.non_speaking_duration = 0.5 
     
     print("Listening...............")
     
     try:
         with sr.Microphone() as source:
-            # Adjust for ambient noise
             recognizer.adjust_for_ambient_noise(source, duration=1.0)
-            
-            # Listen with dynamic energy threshold for better silence detection
             recognizer.dynamic_energy_threshold = True
-            
-            # Listen for audio with timeout of 10 seconds if no speech is detected
             audio = recognizer.listen(source, timeout=10, phrase_time_limit=30)
-        
         print("Processing...............")
-        
-        # Convert audio to proper format for Whisper
-        # Get raw audio data
         audio_data = audio.get_raw_data(convert_rate=16000, convert_width=2)
-        
-        # Convert to float32 numpy array
         float_audio = np.frombuffer(audio_data, dtype=np.int16).astype(np.float32) / 32768.0
-        
-        # Load whisper model
         model = whisper.load_model("base")
-        
-        # Transcribe
         result = model.transcribe(float_audio)
         transcribed_text = result["text"].strip()
         
